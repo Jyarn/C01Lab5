@@ -26,5 +26,11 @@
                 uses: actions/setup-node@v3
                 with:
                   node-version: ${{ matrix.node-version }}
+
+              - name: Start Mongodb
+                uses: supercharge/mongodb-github-action@1.10.0
+                with:
+                  mongodb-version: ${{ matrix.mongodb-version }}
+                  
               - run: npm i
               - run: npm test
