@@ -33,5 +33,6 @@
                   mongodb-version: '6.0' 
                   
               - run: npm i
-              - run: npm start
+              - run: npm start&
+                     sleep 5
               - run: npm test
